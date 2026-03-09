@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wholesale Checkout - MobileParts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003399",
+                        "primary-dark": "#002266",
+                        "background-light": "#f8f9fc",
+                        "background-dark": "#0f1623",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1a2433",
+                        "border-light": "#e2e8f0",
+                        "border-dark": "#2d3748",
+                        "text-main-light": "#0f172a",
+                        "text-main-dark": "#f8fafc",
+                        "text-sub-light": "#64748b",
+                        "text-sub-dark": "#94a3b8",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-display min-h-screen flex flex-col antialiased">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-surface-light dark:bg-surface-dark border-b border-border-light dark:border-border-dark w-full">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Logo Section -->
+<div class="flex items-center gap-4">
+<div class="text-primary dark:text-blue-400">
+<span class="material-symbols-outlined text-3xl">build_circle</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-text-main-light dark:text-text-main-dark hidden sm:block">MobileParts Wholesale</h1>
+</div>
+<!-- Right Actions -->
+<div class="flex items-center gap-4">
+<div class="hidden md:flex items-center gap-2 text-text-sub-light dark:text-text-sub-dark text-sm mr-4">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span>Secure Checkout</span>
+</div>
+<button class="flex items-center justify-center h-10 px-4 bg-primary hover:bg-primary-dark text-white rounded-lg transition-colors text-sm font-semibold">
+<span class="material-symbols-outlined text-[20px] mr-2">shopping_cart</span>
+<span>Cart (12)</span>
+</button>
+<button class="p-2 text-text-sub-light dark:text-text-sub-dark hover:text-primary dark:hover:text-blue-400">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 relative">
+<!-- Left Column: Checkout Forms -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-8">
+<!-- Breadcrumbs/Progress -->
+<nav class="flex items-center gap-2 text-sm text-text-sub-light dark:text-text-sub-dark mb-4">
+<span class="text-primary dark:text-blue-400 font-medium cursor-pointer">Cart</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-text-main-light dark:text-text-main-dark font-semibold">Checkout</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span>Confirmation</span>
+</nav>
+<!-- Section 1: Shipping Address -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm">1</span>
+<h2 class="text-xl font-bold text-text-main-light dark:text-text-main-dark">Shipping Address</h2>
+</div>
+<button class="text-sm text-primary dark:text-blue-400 font-medium hover:underline">Use Saved Address</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">Company Name</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" placeholder="e.g. Tech Solutions Ltd." type="text" value="Global Mobile Fix Inc."/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">First Name</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" type="text" value="James"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">Last Name</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" type="text" value="Miller"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">Street Address</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" type="text" value="4821 Industrial Parkway, Suite 400"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">City</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" type="text" value="Austin"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">State</label>
+<select class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm">
+<option>TX</option>
+<option>CA</option>
+<option>NY</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">ZIP</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" type="text" value="78758"/>
+</div>
+</div>
+<div class="md:col-span-2 flex items-center gap-2 mt-2">
+<input checked="" class="rounded border-border-light text-primary focus:ring-primary h-4 w-4" type="checkbox"/>
+<span class="text-sm text-text-sub-light dark:text-text-sub-dark">Save this address for future wholesale orders</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Shipping Method -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8">
+<div class="flex items-center gap-3 mb-6">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm">2</span>
+<h2 class="text-xl font-bold text-text-main-light dark:text-text-main-dark">Shipping Method</h2>
+</div>
+<div class="space-y-4">
+<!-- Option 1: Freight -->
+<label class="relative flex cursor-pointer rounded-lg border border-primary bg-primary/5 p-4 shadow-sm focus:outline-none ring-1 ring-primary">
+<input checked="" class="sr-only" name="shipping-method" type="radio" value="freight"/>
+<span class="flex flex-1">
+<span class="flex flex-col">
+<span class="block text-sm font-bold text-text-main-light dark:text-text-main-dark">Standard LTL Freight (Palletized)</span>
+<span class="mt-1 flex items-center text-sm text-text-sub-light dark:text-text-sub-dark">
+<span class="material-symbols-outlined text-[18px] mr-1">pallet</span>
+                                        Best for bulk orders over 150 lbs
+                                    </span>
+<span class="mt-2 text-xs font-medium text-primary dark:text-blue-400 bg-white dark:bg-surface-dark px-2 py-1 rounded w-fit border border-primary/20">3-5 Business Days</span>
+</span>
+</span>
+<span class="flex flex-col text-right">
+<span class="text-sm font-bold text-text-main-light dark:text-text-main-dark">$145.00</span>
+<span class="text-xs text-text-sub-light dark:text-text-sub-dark">Est. Delivery: Oct 24</span>
+</span>
+<span aria-hidden="true" class="pointer-events-none absolute -inset-px rounded-lg border-2 border-primary"></span>
+</label>
+<!-- Option 2: Express -->
+<label class="relative flex cursor-pointer rounded-lg border border-border-light dark:border-border-dark p-4 shadow-sm focus:outline-none hover:border-primary/50 transition-colors">
+<input class="sr-only" name="shipping-method" type="radio" value="express"/>
+<span class="flex flex-1">
+<span class="flex flex-col">
+<span class="block text-sm font-bold text-text-main-light dark:text-text-main-dark">Express Courier (Parcel)</span>
+<span class="mt-1 flex items-center text-sm text-text-sub-light dark:text-text-sub-dark">
+<span class="material-symbols-outlined text-[18px] mr-1">local_shipping</span>
+                                        Fastest option via FedEx/UPS
+                                    </span>
+<span class="mt-2 text-xs font-medium text-text-sub-light dark:text-text-sub-dark bg-background-light dark:bg-background-dark px-2 py-1 rounded w-fit border border-border-light dark:border-border-dark">1-2 Business Days</span>
+</span>
+</span>
+<span class="flex flex-col text-right">
+<span class="text-sm font-bold text-text-main-light dark:text-text-main-dark">$210.00</span>
+<span class="text-xs text-text-sub-light dark:text-text-sub-dark">Est. Delivery: Oct 20</span>
+</span>
+</label>
+</div>
+</section>
+<!-- Section 3: Payment -->
+<section class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-sm border border-border-light dark:border-border-dark p-6 sm:p-8">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-3">
+<span class="flex items-center justify-center w-8 h-8 rounded-full bg-primary text-white font-bold text-sm">3</span>
+<h2 class="text-xl font-bold text-text-main-light dark:text-text-main-dark">Payment Method</h2>
+</div>
+<div class="flex items-center gap-1 text-text-sub-light dark:text-text-sub-dark">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span class="text-xs font-medium">Encrypted &amp; Secure</span>
+</div>
+</div>
+<!-- Payment Tabs -->
+<div class="border-b border-border-light dark:border-border-dark mb-6">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="border-primary text-primary dark:text-blue-400 whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">credit_card</span>
+                                Credit Card
+                            </a>
+<a class="border-transparent text-text-sub-light dark:text-text-sub-dark hover:border-gray-300 hover:text-text-main-light whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+                                Net 30 Terms
+                            </a>
+<a class="border-transparent text-text-sub-light dark:text-text-sub-dark hover:border-gray-300 hover:text-text-main-light whitespace-nowrap border-b-2 py-4 px-1 text-sm font-medium flex items-center gap-2" href="#">
+<span class="material-symbols-outlined text-[20px]">account_balance_wallet</span>
+                                Wire Transfer
+                            </a>
+</nav>
+</div>
+<!-- Credit Card Form -->
+<div class="space-y-4 max-w-lg">
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">Card Number</label>
+<div class="relative">
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 pl-10 pr-3 text-sm" placeholder="0000 0000 0000 0000" type="text"/>
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-sub-light text-[20px]">credit_card</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">Expiration Date</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" placeholder="MM / YY" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">CVC</label>
+<div class="relative">
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" placeholder="123" type="text"/>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-text-sub-light">
+<span class="material-symbols-outlined text-[18px]">help</span>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-text-sub-light dark:text-text-sub-dark mb-1">Name on Card</label>
+<input class="w-full rounded-lg border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark focus:ring-primary focus:border-primary py-2.5 px-3 text-sm" placeholder="Full Name" type="text"/>
+</div>
+<div class="pt-4">
+<div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg flex items-start gap-3">
+<span class="material-symbols-outlined text-primary dark:text-blue-400 text-[20px] mt-0.5">info</span>
+<div class="text-xs text-text-main-light dark:text-text-main-dark">
+<p class="font-semibold mb-1">Tax Exemption</p>
+<p class="text-text-sub-light dark:text-text-sub-dark">If you have a valid resale certificate on file, tax will be removed at the final step of processing.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (Sticky) -->
+<div class="lg:col-span-5 xl:col-span-4">
+<div class="sticky top-24 space-y-6">
+<!-- Summary Card -->
+<div class="bg-surface-light dark:bg-surface-dark rounded-xl shadow-lg border border-border-light dark:border-border-dark overflow-hidden">
+<div class="p-6 border-b border-border-light dark:border-border-dark bg-gray-50 dark:bg-surface-dark flex justify-between items-center">
+<h2 class="text-lg font-bold text-text-main-light dark:text-text-main-dark">Order Summary</h2>
+<span class="text-sm text-text-sub-light dark:text-text-sub-dark">12 Items</span>
+</div>
+<!-- Scrollable Items Area -->
+<div class="max-h-[320px] overflow-y-auto p-6 space-y-6 scrollbar-thin scrollbar-thumb-border-dark scrollbar-track-transparent">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-border-light dark:border-border-dark bg-white">
+<img class="h-full w-full object-cover object-center" data-alt="Smartphone screen component close up" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM_2_Fcrn78Z7LUTlA1wJ6qiP23vXfr6bADweZ4bS72Oq3Q0cMcsQZIOTnttVwrXMLcfXtS6rVl8Q1kSEkHfc5l-880yGoccNnIr48z48J5FYsTWb89cVd-QRkr9Ac6Nux-zIRsdiTDU0Uw0EU2ATYYSmeTaMEHsjMa0E7f7puSQfPLceOuqfWZf6uugeoHVraX6BFOhb45SadnLFyvxFiFOkQtqwy2pSMdbB4nh79CQdbGsHwMSNtoEty-DViBrR6ZF-4AUhr"/>
+</div>
+<div class="flex flex-1 flex-col">
+<div>
+<div class="flex justify-between text-base font-medium text-text-main-light dark:text-text-main-dark">
+<h3 class="text-sm line-clamp-2 leading-snug"><a href="#">iPhone 13 Pro Max OLED Display Assembly - Soft OLED</a></h3>
+<p class="ml-4 text-sm whitespace-nowrap">$145.00</p>
+</div>
+<p class="mt-1 text-xs text-text-sub-light dark:text-text-sub-dark">SKU: LCD-IP13PM-SO</p>
+</div>
+<div class="flex flex-1 items-end justify-between text-sm">
+<p class="text-text-sub-light dark:text-text-sub-dark">Qty 5</p>
+<div class="flex text-primary dark:text-blue-400">
+<button class="font-medium hover:text-primary-dark text-xs" type="button">Edit</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-border-light dark:border-border-dark bg-white">
+<img class="h-full w-full object-cover object-center" data-alt="Electronic battery component" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOI8YdiUWrOfnViATgmPvL60ix4dUnR1dIx9TTDZfx225RFwWWL7uw4PwIcJeBvJSA433QRmFenEBOgipaeG6-aztSL7AtwE0rBYzYZsK_463TRSMrwfn7bQxbELaFP3n2pQbaDOWKl0ZO0Itu7S_IrOLg7tcIlgUbakB7T5lUEtV3vJveRvUhE1bdgwuoTLZpqPAXqc68s1kyBxSJNPO5xHS-EzpvsIpkCyKgFwNa-ZQ_523iUx3VXXhiJ9PCPB8Rwkxxzowl"/>
+</div>
+<div class="flex flex-1 flex-col">
+<div>
+<div class="flex justify-between text-base font-medium text-text-main-light dark:text-text-main-dark">
+<h3 class="text-sm line-clamp-2 leading-snug"><a href="#">Replacement Battery for Samsung Galaxy S21 - OEM Capacity</a></h3>
+<p class="ml-4 text-sm whitespace-nowrap">$18.50</p>
+</div>
+<p class="mt-1 text-xs text-text-sub-light dark:text-text-sub-dark">SKU: BAT-SAMS21</p>
+</div>
+<div class="flex flex-1 items-end justify-between text-sm">
+<p class="text-text-sub-light dark:text-text-sub-dark">Qty 20</p>
+<div class="flex text-primary dark:text-blue-400">
+<button class="font-medium hover:text-primary-dark text-xs" type="button">Edit</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-4">
+<div class="h-16 w-16 flex-shrink-0 overflow-hidden rounded-md border border-border-light dark:border-border-dark bg-white">
+<img class="h-full w-full object-cover object-center" data-alt="Charging port flex cable" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMR7kc1huMQJVzvl2LItd9XXm50EuqUIJN0kiIo-t70NpLVVWtcISeHWYF57AOFRXF_vfAoD2XUso5Ya3TP9UPmqX7CnkK6kJU6XDH3zQBsovCrZ5jVYpbEanuACCa2tHWLrbeIZhst5dBYnOJm4OND5BECRebG_X6QjPPBUYcTyMl44KErYUCPgub6fuaRBzXs3tUuQiVV6WdJjuEYRHrMKInrqHTUMrYa71ss3g5tqDnWJcVBGkoxGenZCGoWdgJje_VUlW6"/>
+</div>
+<div class="flex flex-1 flex-col">
+<div>
+<div class="flex justify-between text-base font-medium text-text-main-light dark:text-text-main-dark">
+<h3 class="text-sm line-clamp-2 leading-snug"><a href="#">USB-C Charging Port Flex Cable - Universal Wholesale Pack</a></h3>
+<p class="ml-4 text-sm whitespace-nowrap">$4.25</p>
+</div>
+<p class="mt-1 text-xs text-text-sub-light dark:text-text-sub-dark">SKU: FLX-USB-C-100</p>
+</div>
+<div class="flex flex-1 items-end justify-between text-sm">
+<p class="text-text-sub-light dark:text-text-sub-dark">Qty 50</p>
+<div class="flex text-primary dark:text-blue-400">
+<button class="font-medium hover:text-primary-dark text-xs" type="button">Edit</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Calculations -->
+<div class="border-t border-border-light dark:border-border-dark p-6 bg-gray-50 dark:bg-surface-dark space-y-4">
+<div class="flex justify-between text-sm text-text-sub-light dark:text-text-sub-dark">
+<p>Subtotal</p>
+<p class="font-medium text-text-main-light dark:text-text-main-dark">$1,307.50</p>
+</div>
+<div class="flex justify-between text-sm text-text-sub-light dark:text-text-sub-dark">
+<p>Freight / Shipping</p>
+<p class="font-medium text-text-main-light dark:text-text-main-dark">$145.00</p>
+</div>
+<div class="flex justify-between text-sm text-text-sub-light dark:text-text-sub-dark">
+<div class="flex items-center gap-1">
+<p>Estimated Tax</p>
+<span class="material-symbols-outlined text-[14px] cursor-help" title="Tax calculated based on shipping address">help</span>
+</div>
+<p class="font-medium text-text-main-light dark:text-text-main-dark">$108.94</p>
+</div>
+<div class="border-t border-border-light dark:border-border-dark pt-4 flex justify-between items-center">
+<p class="text-base font-bold text-text-main-light dark:text-text-main-dark">Grand Total</p>
+<p class="text-2xl font-bold text-primary dark:text-blue-400">$1,561.44</p>
+</div>
+<button class="w-full flex items-center justify-center rounded-lg border border-transparent bg-primary px-6 py-4 text-base font-bold text-white shadow-sm hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 transition-all" type="button">
+                                Place Wholesale Order
+                            </button>
+<div class="flex justify-center items-center gap-4 opacity-50 pt-2">
+<span class="material-symbols-outlined text-2xl" title="Visa">payments</span>
+<span class="material-symbols-outlined text-2xl" title="Mastercard">credit_card</span>
+<span class="material-symbols-outlined text-2xl" title="Amex">account_balance</span>
+<span class="material-symbols-outlined text-2xl" title="Secure">lock</span>
+</div>
+</div>
+</div>
+<!-- Help Card -->
+<div class="rounded-xl border border-border-light dark:border-border-dark bg-surface-light dark:bg-surface-dark p-4 shadow-sm">
+<div class="flex items-start gap-3">
+<div class="flex-shrink-0">
+<span class="material-symbols-outlined text-primary dark:text-blue-400">support_agent</span>
+</div>
+<div>
+<h3 class="text-sm font-medium text-text-main-light dark:text-text-main-dark">Need help with your order?</h3>
+<p class="mt-1 text-sm text-text-sub-light dark:text-text-sub-dark">
+                                    Call our wholesale support line at <a class="font-medium text-primary hover:underline" href="#">1-800-555-0199</a> or email support@mobileparts.com
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-border-light dark:border-border-dark mt-auto py-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-text-sub-light dark:text-text-sub-dark">© 2023 MobileParts Wholesale. All rights reserved.</p>
+<div class="flex gap-6 text-sm text-text-sub-light dark:text-text-sub-dark">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Return Policy</a>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MobilesCentrix Homepage</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#003580",
+                        "secondary": "#FF6B00",
+                        "background-light": "#ffffff",
+                        "background-off": "#f5f7f8",
+                        "background-dark": "#0f1723",
+                        "border-light": "#e5e7eb",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light text-slate-900 font-display antialiased overflow-x-hidden">
+<!-- Top Utility Bar -->
+<div class="bg-background-off border-b border-border-light text-slate-600 text-xs py-2 hidden md:block">
+<div class="container mx-auto px-4 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<span>FREE delivery on all orders over $50</span>
+<span class="text-slate-300">|</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">call</span> +1-800-MOBILE
+                </span>
+</div>
+<div class="flex items-center gap-4">
+<a class="hover:text-primary transition-colors" href="#">Track Order</a>
+<span class="text-slate-300">|</span>
+<div class="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
+<span>English</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+<div class="flex items-center gap-2 cursor-pointer hover:text-primary transition-colors">
+<span>USD</span>
+<span class="material-symbols-outlined text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Header -->
+<header class="bg-white sticky top-0 z-50 shadow-sm border-b border-border-light">
+<div class="container mx-auto px-4 py-4">
+<div class="flex items-center justify-between gap-8">
+<!-- Logo -->
+<a class="flex items-center gap-2 text-primary hover:opacity-90 transition-opacity min-w-max" href="#">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-slate-900">MobilesCentrix</h1>
+</a>
+<!-- Search Bar -->
+<div class="hidden md:flex flex-1 max-w-2xl">
+<div class="relative w-full flex">
+<button class="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2.5 rounded-l-lg border-r border-slate-200 font-medium text-sm flex items-center gap-1 transition-colors whitespace-nowrap">
+                            All Categories
+                            <span class="material-symbols-outlined text-[18px]">expand_more</span>
+</button>
+<input class="w-full border-slate-200 bg-slate-50 py-2.5 px-4 text-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none border-y border-l-0" placeholder="Search for products, brands and more..." type="text"/>
+<button class="bg-primary hover:bg-blue-800 text-white px-6 py-2.5 rounded-r-lg flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</div>
+<!-- User Actions -->
+<div class="flex items-center gap-6 text-slate-700">
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:fill-current">person</span>
+<span class="text-xs font-medium hidden lg:block">Account</span>
+</a>
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors group relative" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-xs font-medium hidden lg:block">Wishlist</span>
+<span class="absolute -top-1 -right-1 size-4 bg-secondary text-white text-[10px] font-bold rounded-full flex items-center justify-center">2</span>
+</a>
+<a class="flex flex-col items-center gap-1 hover:text-primary transition-colors group relative" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-xs font-medium hidden lg:block">Cart</span>
+<span class="absolute -top-1 -right-1 size-4 bg-secondary text-white text-[10px] font-bold rounded-full flex items-center justify-center">5</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Navigation Menu -->
+<div class="border-t border-border-light bg-white hidden md:block">
+<div class="container mx-auto px-4">
+<nav class="flex items-center gap-8 py-3">
+<div class="relative group">
+<button class="flex items-center gap-2 font-semibold text-primary">
+<span class="material-symbols-outlined">menu</span>
+                            Browse Categories
+                        </button>
+<!-- Dropdown would go here -->
+</div>
+<a class="text-sm font-medium hover:text-primary transition-colors text-primary" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Shop</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Brands</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">New Arrivals</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Flash Sales</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600" href="#">Blog</a>
+<a class="text-sm font-medium hover:text-primary transition-colors text-slate-600 ml-auto" href="#">Help Center</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- Mobile Search (Visible only on mobile) -->
+<div class="md:hidden p-4 bg-white border-b border-border-light">
+<div class="relative w-full">
+<input class="w-full border border-slate-200 rounded-lg py-2 px-4 pr-10 text-sm focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Search products..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+</div>
+</div>
+<!-- Hero Section -->
+<section class="container mx-auto px-4 py-6">
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+<!-- Left Category Menu (Desktop) -->
+<div class="hidden lg:block bg-white rounded-lg border border-border-light shadow-sm overflow-hidden h-full">
+<ul class="divide-y divide-border-light">
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Smartphones</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Tablets &amp; iPads</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Smart Watches</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Accessories</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Audio &amp; Headphones</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Laptops</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+<li><a class="flex items-center justify-between px-4 py-3 hover:bg-slate-50 hover:text-primary transition-colors text-sm font-medium" href="#"><span>Gaming</span> <span class="material-symbols-outlined text-sm">chevron_right</span></a></li>
+</ul>
+<div class="p-4 bg-slate-50">
+<a class="text-primary text-sm font-semibold flex items-center gap-1" href="#">View All Categories <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+<!-- Main Slider -->
+<div class="lg:col-span-3 relative rounded-xl overflow-hidden min-h-[400px] flex items-center bg-cover bg-center" data-alt="Modern smartphone display on dark background with blue and purple ambient lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDgKU1j79Hr-8NxujznRvqAu5Nlrz1uR5KALb6H21pT1lqNUJb2rEgNszELRhVWPI1nqB4U8IAqdK4JI8y-GlB6K8CXmBJ3dAJqc1tzIkd2EypxjDJl_Bq84pwItyxHjXxVBxNF1aa_yyuBIN8JeTPGzAW_h9HFj92IVY426rjZKuM_XuwXNNFQoVt1obHHXXItd-bbNd2pYlJRFnb3XXWJ5_ekdhEvh9R55wEkTH7okMeEPom4GfPIWzOktyuGO1tnX3xpMKKkRozG');">
+<div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/40 to-transparent"></div>
+<div class="relative z-10 px-8 md:px-12 py-12 max-w-xl">
+<span class="inline-block bg-secondary text-white text-xs font-bold px-2 py-1 rounded mb-4">SUMMER SALE</span>
+<h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Up to 30% off<br/>Flagship Smartphones</h2>
+<p class="text-slate-200 mb-8 text-lg">Experience the next generation of mobile technology. Limited time offers on top brands.</p>
+<a class="inline-flex items-center justify-center px-8 py-3 bg-white text-primary font-bold rounded-lg hover:bg-slate-100 transition-colors" href="#">
+                        Shop Now
+                    </a>
+</div>
+<!-- Slider Arrows -->
+<button class="absolute left-4 top-1/2 -translate-y-1/2 size-10 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 size-10 bg-white/20 hover:bg-white/40 backdrop-blur-sm rounded-full flex items-center justify-center text-white transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Trust Badges -->
+<section class="container mx-auto px-4 py-4">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-background-off rounded-lg border border-border-light p-6">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-white border border-border-light flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">local_shipping</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-slate-900">Free Shipping</h4>
+<p class="text-xs text-slate-500">On orders over $50</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-white border border-border-light flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">verified_user</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-slate-900">Official Warranty</h4>
+<p class="text-xs text-slate-500">1 Year Guarantee</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-white border border-border-light flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-slate-900">24/7 Support</h4>
+<p class="text-xs text-slate-500">Always here for you</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-white border border-border-light flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<div>
+<h4 class="font-bold text-sm text-slate-900">Secure Payment</h4>
+<p class="text-xs text-slate-500">100% Secure</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Icons Rail -->
+<section class="container mx-auto px-4 py-8">
+<h3 class="text-xl font-bold text-slate-900 mb-6">Shop by Brand</h3>
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<!-- Brand Item -->
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">phone_iphone</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Apple</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">android</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Samsung</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">smartphone</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Xiaomi</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">tablet_mac</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Tablets</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">watch</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Wearables</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">headphones</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Audio</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">laptop_mac</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Laptops</span>
+</a>
+<a class="flex flex-col items-center gap-3 group min-w-[100px]" href="#">
+<div class="size-20 rounded-full bg-slate-50 border border-border-light flex items-center justify-center p-4 group-hover:border-primary group-hover:shadow-md transition-all">
+<span class="material-symbols-outlined text-4xl text-slate-800">videogame_asset</span>
+</div>
+<span class="text-sm font-medium text-slate-700 group-hover:text-primary">Gaming</span>
+</a>
+</div>
+</section>
+<!-- Featured Products / Flash Sale -->
+<section class="container mx-auto px-4 py-8">
+<div class="flex flex-wrap items-center justify-between mb-6 gap-4">
+<div class="flex items-center gap-4">
+<h2 class="text-2xl font-bold text-slate-900">Featured Mobile Phones</h2>
+<div class="hidden md:flex items-center gap-2 bg-red-50 text-secondary px-3 py-1 rounded-full border border-red-100">
+<span class="material-symbols-outlined text-sm">timer</span>
+<span class="text-sm font-bold">Ends in: 04 : 12 : 45</span>
+</div>
+</div>
+<a class="text-primary font-medium hover:underline text-sm flex items-center gap-1" href="#">View All Deals <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Promo Banners -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="rounded-xl overflow-hidden relative bg-slate-900 h-64 flex items-center group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 opacity-60" data-alt="Abstract gradient shapes in dark colors representing high tech" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbPANwENiqoChIXnIyn6IDAzcsSGanrSD-nDe9tP_tFjeUg0NfRhSUPG719MSXhjQtayvqsjwCz2QFUhCBM5lU0O0nibDaeHXmTIR5SULRk91xOim-Rz7f7smrjD9Kjnr4f2GARL6bkwp0Ucm9p_mvqY33tLrh6Pw_CeY_xBo7eRXfTACLyfOD-6LqoH6LPlFwSMlDEtMsaxHN7s-EvKsc9KnQan1hDs7hlctusH0aes0WtdO1IDjn6RdG5W-hQ5KsqGqhGgo6akWP');"></div>
+<div class="relative z-10 p-8">
+<span class="bg-primary text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block">NEW ARRIVAL</span>
+<h3 class="text-3xl font-bold text-white mb-2">iPhone 15 Pro</h3>
+<p class="text-slate-300 mb-4">Titanium design. A17 Pro chip.</p>
+<span class="inline-block text-white font-bold border-b border-white pb-0.5 hover:text-secondary hover:border-secondary transition-colors">Shop Now</span>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden relative bg-slate-900 h-64 flex items-center group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105 opacity-60" data-alt="Samsung Galaxy S24 styled background with galaxy colors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxd8eO7-4zHW72SxcLVhPWd0v1OyKSWLQZag0JWwHTzrZK0V-XamlpdQcXKEKZ_Fn7c9XF4rqJ4CZv-xAtGPMX3bVj5109hBEkiGp8WuwaccoOczkiEplyThM_GIlqbsV4d8MHenXoJJFyJ6MSnMm43ExyUjncSw02qQiil3XTxd2l0Klzthjt8oQOag_5AiEx6fHNA6myYYVpFC3JPRhyRH02Dtr5G52ZgbE7Rn_pBsClgMaI7GmSgZ9on92vogNY8Uh2poM7Htd5');"></div>
+<div class="relative z-10 p-8">
+<span class="bg-secondary text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block">HOT DEAL</span>
+<h3 class="text-3xl font-bold text-white mb-2">Samsung S24 Ultra</h3>
+<p class="text-slate-300 mb-4">Galaxy AI is here. Epic zoom.</p>
+<span class="inline-block text-white font-bold border-b border-white pb-0.5 hover:text-secondary hover:border-secondary transition-colors">Shop Now</span>
+</div>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<span class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">-25%</span>
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="iPhone 15 Pro Max Natural Titanium" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZhFiqz7lC39p_qjAeAa1UQlZVwEGEx3YFDES42dp7b05DcbYWAsxXYLPCQsyJmyfZI4o2-Ts7v9uTPybT4aodbAwd8_jwfuJXjjUkXWwScp15ksDyRtEM1U_Wz27JVRi_PQw8SK4yu4A7E7kXUTFvk9xTFtbIPgAKuGnpeDkY0qwFk89-rukCkmxXyB3ivnjRbDpnHub_ACzt54YkfdVWtFCcrkFfAvLYAQLMmk-oo4XCasy9aULA9F-SbWYGegY7jm_KhJKDMH6Q"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Apple iPhone 15 Pro Max</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">256GB</span>
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">512GB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$1,199.00</span>
+<span class="text-sm text-slate-400 line-through decoration-slate-400">$1,599.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="Samsung Galaxy S24 Ultra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBj2qstI0kL0n2pdrBqLaIOm1c14KN7b-NFNIcMSLg4jKQB-uG3DzEpHo3hiBuyzjakkq8z0b95iy9-vCqj8natWFlUub5eLEiVFlok_fkw3MbhBZn_yd11GlzMieA6OS2tcAu5voxUGOMBv2vKcHqz-JDGVN8Cy46RVm7s4uGONxF6ZR97HiTmP5Rtt0tvfiwqQix7FZmcCrzohx-T27xnc1WgoDP0-lbc5ENnX8NTsqMO0azMEdTrEz5Dy51h9xLY_VIwEYFLtN6-"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Samsung Galaxy S24 Ultra</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">512GB</span>
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">1TB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$1,299.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<span class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">-10%</span>
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="Google Pixel 8 Pro" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrJZWPqc-RnWEYMM-ieh-UPJFuU19zVAnyMER2eRMAogM_-KITlUCZRCnCAXJ3XzCvVMUY08dTzp6AImiggmd-5u2Pp5x_fS9391mqnUk4Hgpml76cmug5-3yL9asp7UvgBmdpPJmh5V6vrfXCaHWbG2TsnM2yi60geWO5aAwBphZWlcT6otNyAxtBW-YKWtiyJ11u1gPs3VCYOWSwvCDP7NtyQRE0aydy4IL3XcYyxjYiaErEQI4Mo-9zZuogOozb2IGgZsWWHBJX"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Google Pixel 8 Pro</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">128GB</span>
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">256GB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$899.00</span>
+<span class="text-sm text-slate-400 line-through decoration-slate-400">$999.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="OnePlus 12" src="https://lh3.googleusercontent.com/aida-public/AB6AXuASe0bkFFoDxvQAK4MTOoeaXNXNmoUCoFoVlUvcLBSCUeEe4PbmvNTaMkdRlRW0FE1_OAvang2iZ3Hc13-ySs3S4dpS0VIPdcLQXuD-POVag_sCKLHHQIs5k0dihiGcQYekKwKxHuxMlkUlHDX13uGwZElZrbNW7cIO0d-UAYLUFQaYEzY3Xwo2IC0WupUaK1e1OL8o39BGXvlphd5n9ioXNYgIza7Nj_EUWwA3wQ_8gpYXPbt1Vl8jsSnBSFzvdEfvlN3QoplbM6bA"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">OnePlus 12 5G</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">256GB</span>
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">512GB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$799.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<span class="absolute top-4 left-4 bg-secondary text-white text-xs font-bold px-2 py-1 rounded">-15%</span>
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="Xiaomi 14 Ultra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpARndmfSvaBvfqg5-O7BGO9jo0_f-bxs6CaHUQTeEy5sbXXV_uAEyc-oqdMQAfXI90PwXl_W8z5_8I7adNGeM5z4NcUfUfdIgjvNTJxKkm6jo0VjZYbVR5lWn3bRUf2euuOJwXaNBx6iLYjquY1sQ6P1kM22nUJtZAHUKwn3NyttXpoEe80-uXzAQtskqxSha0SzyX9Uz_tge1K-Y5t7iI-tMTV9LIlHR3uPzxzPVrkhDptTSF2tsXZmCxH5vfZTGElkHMPrtJ_o2"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Xiaomi 14 Ultra</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">512GB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$1,099.00</span>
+<span class="text-sm text-slate-400 line-through decoration-slate-400">$1,299.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="Sony Xperia 1 V" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSvKGI2BGJL7Wk6zLYHVR13bxHFzUWo-lGB4NDzj0gExGy6qj6R4AlLxHrB55VTRu2hyrw1u1xOS-UTckEuCIcZr040pynEuTNkOr4S4jdW7AyEq1PDN3Xuc4U0gqUn9uPG-XsFfvp2xCKN5eepQHnLrAMn-6MtXo41AtoafSvWPeLdspyyoAX5JRvBU4OZkNOh-myGf8LfA0oa1zLQDltT0p-PxiZ4ijv4_62yPyt8-5I_ldJ2czQ1hR2FyfJKhARSPtsBBx7xyNr"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Sony Xperia 1 V</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">256GB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$1,199.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 7 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="Nothing Phone (2)" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlbGAQS5TL5XusFWH3K8qOvo9vkC5As32gmLfzVWGafFeS8CMeqV7ziNEF1mzU2UxvIvwtV7pl1PyqMrOJ5BjPOxM8Bu_d8KVHBHWPo_sxfdSjhl0LxO_EhQV0JAkfcBxWIFqEatnb7Ri5vfniE8zQk98r42Y5Qw9iD7SjV2U8Qh1qmDbVlJraQMLi4ll8EoZKwlSgjWH_uWe68dMPNKuxUiGBfximSNkNs5wkriyu0NZEw1kaaBXLWbphQ-RGQaFsfKuekSiTqS7w"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Nothing Phone (2)</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">256GB</span>
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">512GB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$699.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+<!-- Product Card 8 -->
+<div class="group bg-white border border-border-light rounded-lg hover:shadow-lg hover:border-primary/30 transition-all p-4 relative">
+<button class="absolute top-4 right-4 text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+<div class="aspect-square mb-4 flex items-center justify-center p-4 bg-slate-50 rounded-lg">
+<img class="object-contain h-full w-auto mix-blend-multiply" data-alt="Asus ROG Phone 8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhZecRKZsSFz481nNv96jGAAGjhCJCIToSRrqn47nLpQinvv-m2ltjfbQJXXR3qKTT7NyzN8yn3K02gSzPZ_cTDWPNu0PhSbsPGHcInnbBehAhHAGa0z7k9ABlTeF7FtXjLgXGU6tkxgNYShpEOJaxG4OBw6HL7yk9WOzz00_Q_XGlz9uKmvQzHBo_5pCWZVCpKvnYyIxCh3Iwou1NuzII5xnadn7QH7fu1d4w5i_OYcZSYyPvxUbKGkw9ryC3t6TqNYPViuDGw4PW"/>
+</div>
+<h3 class="text-slate-900 font-semibold mb-1 truncate">Asus ROG Phone 8</h3>
+<div class="flex gap-2 mb-3">
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">512GB</span>
+<span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded border border-slate-200">1TB</span>
+</div>
+<div class="flex items-center justify-between mt-auto">
+<div>
+<span class="text-lg font-bold text-primary block">$1,099.00</span>
+</div>
+<button class="bg-primary hover:bg-blue-800 text-white p-2 rounded-lg transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Weekly Best Selling -->
+<section class="bg-background-off py-12">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
+<h2 class="text-2xl font-bold text-slate-900">Weekly Best Selling</h2>
+<div class="flex gap-4">
+<button class="text-primary font-semibold border-b-2 border-primary pb-1">New Arrivals</button>
+<button class="text-slate-500 font-medium hover:text-primary transition-colors pb-1">Best Sellers</button>
+<button class="text-slate-500 font-medium hover:text-primary transition-colors pb-1">Top Rated</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Large Promo Card 1 -->
+<div class="bg-white rounded-xl p-6 shadow-sm border border-border-light flex flex-col items-start justify-center relative overflow-hidden h-64 lg:h-auto">
+<div class="absolute right-0 bottom-0 w-1/2 h-full bg-cover bg-no-repeat bg-center" data-alt="Smart watch product shot" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCvkgUysh_SEXl5ndWWhzN_86MrVGS9oyoKQY31SUSmCwsPRJGMns4qCiOKeBV3nBT8yrdgwIo8dOaU5ncZgm8nL3jmyJHTPrYfX3ZohO3zlSml93TDa8_iTwGJsHUizmuh1jYw9BUyHY_JUyw9ORg0gkxfGGALpZNwStkJbs7wr7n4bCciBC385xO0V6G84f_I0M0v8Te7YiqSKzT9TVHDARdZI1RaXe5SaPG77bbuQB87ssrwZ-1LflmlCn0_6u_GapHtl9n-DOEL'); opacity: 0.8;"></div>
+<div class="relative z-10 w-2/3">
+<h3 class="text-xl font-bold text-slate-900 mb-2">Smart Watches<br/>Series 9</h3>
+<p class="text-slate-500 text-sm mb-4">Starting from $399</p>
+<a class="text-primary font-bold text-sm underline" href="#">Shop Now</a>
+</div>
+</div>
+<!-- Product List Horizontal -->
+<div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- Horizontal Product Card -->
+<div class="bg-white p-4 rounded-lg shadow-sm border border-border-light flex items-center gap-4 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 bg-slate-50 rounded-lg flex-shrink-0 flex items-center justify-center p-2">
+<img class="object-contain h-full mix-blend-multiply" data-alt="Apple Watch Ultra" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBET4V33E1qt8vQz_AYHMxZwOup2pZj-1x8Kut7-6lYNqEQzM1i7DQvxJVZNWUQ22PAboaQQXNgzpMnKij2YbGYgKxMgJq9rjHOsXevhOaGoBt-R41Z2DUkLuN28qEweJgYkOsXkzgiT3NToZYB1Kj3gVVtBI0VRDktwIH1kHhVF4AkVsxLdNrYxJWgOm4pYEuZvOB2iGV2oOqccONiDHJ4kfDmGHPYvuKIfRiHTY2sUTQNHkOE7HtfRbVjZEg2dHsS5o7KCu0mkxvx"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold text-slate-900 mb-1 line-clamp-1">Apple Watch Ultra 2</h4>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 fill-current">star</span>
+<span class="text-xs text-slate-500">4.9 (120)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-bold text-primary">$799.00</span>
+<button class="size-8 rounded-full bg-slate-100 text-slate-700 hover:bg-primary hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-border-light flex items-center gap-4 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 bg-slate-50 rounded-lg flex-shrink-0 flex items-center justify-center p-2">
+<img class="object-contain h-full mix-blend-multiply" data-alt="Smart Watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKiIN9_Cnrl-y7dX7ARvv6FWDGCT9pR5WvQF0wCrSEybHRhPX2X8kRmB76AwezXTg9-QUaCARwbBMcU7MlRT8X6vp9dMfJiwACBrVTDhruO9Jksvf5MfQmyYnS7863zfZo2OuW6Wa5jSMi-u222RqrCEmKNCZWPfZS12pwWb-qqKSKvtsG_qOmsU7C4bIdbPYAbJzYYOjZiqkEgFsKhv9IZFnAsw4tUd7GXabc3Kodidc1VcYspCsQsOy_jUy3dJnlDVTn_zYePDPq"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold text-slate-900 mb-1 line-clamp-1">Samsung Galaxy Watch 6</h4>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 fill-current">star</span>
+<span class="text-xs text-slate-500">4.7 (85)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-bold text-primary">$299.00</span>
+<button class="size-8 rounded-full bg-slate-100 text-slate-700 hover:bg-primary hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-border-light flex items-center gap-4 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 bg-slate-50 rounded-lg flex-shrink-0 flex items-center justify-center p-2">
+<img class="object-contain h-full mix-blend-multiply" data-alt="Wireless Earbuds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK8d6aVeEHTP2swRkEbT4TF1iVzMUEeZSr8rtgUrPcvt-PbVqgdPyOSH658uLJnwUDv3PMu_lNgvHD6ftJImqFF6AHtGyFn_y3thCHOvEPzxcvxnXH_y3t4xWAY7p6QcuJjx9XC0789thVEVWq3IZnMzKsd7GcDONaiOVVr6PlUzK7MU0IZWwCuWbPhLev2A-oXez6MNhSWa8EQWDI_xduR_pqRBvqFres7JZp5V0vLQpl7cHG9s83vNU27w34naklXipltV0Pca2w"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold text-slate-900 mb-1 line-clamp-1">AirPods Pro (2nd Gen)</h4>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 fill-current">star</span>
+<span class="text-xs text-slate-500">4.8 (340)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-bold text-primary">$249.00</span>
+<button class="size-8 rounded-full bg-slate-100 text-slate-700 hover:bg-primary hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+<div class="bg-white p-4 rounded-lg shadow-sm border border-border-light flex items-center gap-4 hover:shadow-md transition-shadow">
+<div class="w-24 h-24 bg-slate-50 rounded-lg flex-shrink-0 flex items-center justify-center p-2">
+<img class="object-contain h-full mix-blend-multiply" data-alt="Smart Watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoS_msBiCZfG7IwarIEr7eP7mIdvgOt1i2EPmuzo5RXM5mE9qNZhjgPQTNV3Rx9KQU1l0NSsedJ2l5iW3lAnxbNig8Kw7xOGlXHjBz8pIDyVFSN8QoteFesAuNlySNUgEnsmc-ODj6g0YwTh0Iugt9N3ubibk0ePt-xwvl0YEO0LJC80jrkXzU8zqa0eB8-nKwBbT-yZkcbsquOoLPdORExyd2n0rSaxFXwrgJBJfQZ7y-3oKYblckqJJz9ncYSmdNj22ietIFhr7v"/>
+</div>
+<div class="flex-1">
+<h4 class="text-sm font-semibold text-slate-900 mb-1 line-clamp-1">Apple Watch SE</h4>
+<div class="flex items-center gap-1 mb-2">
+<span class="material-symbols-outlined text-[14px] text-yellow-400 fill-current">star</span>
+<span class="text-xs text-slate-500">4.5 (56)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-bold text-primary">$249.00</span>
+<button class="size-8 rounded-full bg-slate-100 text-slate-700 hover:bg-primary hover:text-white flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trending Section -->
+<section class="container mx-auto px-4 py-12">
+<h2 class="text-2xl font-bold text-slate-900 mb-6">Trending Accessories</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Simple Card 1 -->
+<div class="bg-white border border-border-light rounded-lg p-4 hover:border-primary/50 transition-colors text-center group">
+<div class="aspect-square bg-slate-50 rounded-lg mb-3 flex items-center justify-center p-4">
+<img class="object-contain max-h-32 mix-blend-multiply" data-alt="Phone case" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByl91CQoosmJab4Op2XlQjUl9HNjUBtru0WU1rpS-MLmvYL2OW4_KYk7JJHYYxAutYsLYU87f8Y5cUTPR22tfe5isPWO2MyUV-PlXzgCHDRDpvhNLC3Zk_2gP-QMmf0plmp9AcjP8DeYWNaGs_9lxEMD_jQwYId1x_KvblrtEv69SHypatzGACQ8VlD6mheItXP1E9E_Uk5w9uR0VxicK1vs6Vs-ldcXj8XFhMTORRsztD1wxwNYOIVvjZCFEru62bIW_63l4sj1Cn"/>
+</div>
+<h3 class="text-sm font-semibold text-slate-900 mb-1 group-hover:text-primary">MagSafe Cases</h3>
+<p class="text-xs text-slate-500">From $29</p>
+</div>
+<!-- Simple Card 2 -->
+<div class="bg-white border border-border-light rounded-lg p-4 hover:border-primary/50 transition-colors text-center group">
+<div class="aspect-square bg-slate-50 rounded-lg mb-3 flex items-center justify-center p-4">
+<img class="object-contain max-h-32 mix-blend-multiply" data-alt="Phone charger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdAzNdiPdkBo6f_tx3aGGW4p_fQDr21lXrxn_k_zIL6CYplbzM7XHHeYHl42NGIx7y_AwhJRXV75A3OQVusXkUM_Qsia-ZyW_afkyUe4LrCsXoG68s2UfFDxqKvNVlghrNM_5h0NNxbKjYq3bWNPgQqTJsD1sTy7wuiaka8f6xMZsPHfut_S15gCJklz1FxuDmGRI1H6ISkTwbG3qiGZSrYKKmSFWSa2ayh25w-BZaRRW13QwfemKDqdNCONK6agqv-VEn_53XE_sA"/>
+</div>
+<h3 class="text-sm font-semibold text-slate-900 mb-1 group-hover:text-primary">Fast Chargers</h3>
+<p class="text-xs text-slate-500">From $19</p>
+</div>
+<!-- Simple Card 3 -->
+<div class="bg-white border border-border-light rounded-lg p-4 hover:border-primary/50 transition-colors text-center group">
+<div class="aspect-square bg-slate-50 rounded-lg mb-3 flex items-center justify-center p-4">
+<img class="object-contain max-h-32 mix-blend-multiply" data-alt="Power bank" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsBLb4hSZtDPW2EWpwQJ8NcQUbjwSV7ln3M52Rj6yHK3uUBwgmRJKxOsBJ55QrBCw15TceXzI5Wi0_DDnO5d7AB5ujfY2uN4pozLA9Yh6aA9ZCg7O9dLqWubE1KbHTIfohzECgYirCMayAGH3-IE9KVjDM3z5y5azI1pKuRRUKK_sfl0MwdU9sf5dQIW7nvzl4m-VTNJhSKMDoeF1YWptylHSKhouANShqVjTuuLZu_1X3oFq4-T5sKDvQn7hclf77xyuEj7ZD9V7r"/>
+</div>
+<h3 class="text-sm font-semibold text-slate-900 mb-1 group-hover:text-primary">Power Banks</h3>
+<p class="text-xs text-slate-500">From $35</p>
+</div>
+<!-- Simple Card 4 -->
+<div class="bg-white border border-border-light rounded-lg p-4 hover:border-primary/50 transition-colors text-center group">
+<div class="aspect-square bg-slate-50 rounded-lg mb-3 flex items-center justify-center p-4">
+<img class="object-contain max-h-32 mix-blend-multiply" data-alt="Screen protector" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN3805oSgRqO22qRm6uw91fkDqZup5sSKyqkmsS7ZoF_UBX0Mszw5gy2jgsNriwPjVHIEBILxTARVJ4f-jUUStToHCARQgEId_SUF87UVPWbKHsJElkFBURdUkpq3L2whK068m0N3HCd54ZOqno9Gbj1JoUrPUqq2P0JmRRum-YZQtV43fzG3jBWb7a7BGSLcTQOIgfpohN1mzsL695ffMZ-14BxZecAflijfqTeyp91KpyH_CT5Gs2ZeKNHZC3DfDrk8FQQDE1BgV"/>
+</div>
+<h3 class="text-sm font-semibold text-slate-900 mb-1 group-hover:text-primary">Screen Protectors</h3>
+<p class="text-xs text-slate-500">From $9</p>
+</div>
+</div>
+</section>
+<!-- Latest Blog Posts -->
+<section class="container mx-auto px-4 py-8 mb-8">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-2xl font-bold text-slate-900">Latest Tech Insights</h2>
+<a class="text-primary font-medium hover:underline text-sm" href="#">View Blog</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<article class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden mb-3 aspect-video relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Smartphone camera comparison" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA15IlwqtGXX_cfA3MM9wZZHVJLz5iub24eWe2lD84Wlv6hpF42BQSnd1HMoOh5L_sFwV1-LBHHI_rvzk9We3cujhh5iDwufg8lB6cNu4R3Vg2ONzV2SmLwYYdyV985gCODqmE35cMYYiVqMw-zxq-5GgsoEFy9zdM_4p0IcDWfJExR-N1WHnwcFxLa8tDzDlXnrYfEnXX_aFQ3uiAmsSF3GKli2_iVYYXHMZc-ltmnMNliXYSMoy0hc3Ncz26oBASuUwVtBopbpV8M"/>
+</div>
+<p class="text-xs text-secondary font-bold mb-1">REVIEWS</p>
+<h3 class="font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary transition-colors">Top 10 Best Camera Smartphones of 2024</h3>
+<p class="text-xs text-slate-500">Oct 12, 2024 • 5 min read</p>
+</article>
+<article class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden mb-3 aspect-video relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Phone battery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtAPRLoedLgLzbTEN0eoeTQ71eQbAvSPsZqEpZ_F0F1Cd0JOa7Eh_03CJvRPfYmFYaNtuu2Tx1EXab2klqfuAoMKjjgfZFv4NqrJJH5wxF--lPefUZQSQ5GiohRhiDpUma93EkIQmzhkX9Eh57qNbZNCmilVYkqqCqkyklFm_CuYgzAV67OcEKNnkdq5jaoOZ2pF58ut7rJk8teHaCx8FqlvCtJ0JOIXc8cxtqi4DZxmf6bhhItrcGniReAB9CfLc0R0TvBTZC6oWb"/>
+</div>
+<p class="text-xs text-secondary font-bold mb-1">TIPS &amp; TRICKS</p>
+<h3 class="font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary transition-colors">How to maximize your phone's battery life</h3>
+<p class="text-xs text-slate-500">Oct 08, 2024 • 3 min read</p>
+</article>
+<article class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden mb-3 aspect-video relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="5G network concept" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoWKe8PxJPZ6cN8KDRy9RKOMGueOFQJr0DuE_lv-wXMeI0lHkG_TwU0KAOoAv4Y-ZSGTvjvFVBBXlAOqxM55xee4VdYJp4Xn42PhW3JdirUAxrKueK63wSX6AzHfcxrQiEIGG6jc3nFRtnBA7WR37TCijp1z4mnEgRnIGWoBDCR2jdhQrGNg6_l_-HmLMgKcFJVnfNSDHWoWAj9fcWJf4lGvHDV9ouPSW8H5Lk9qVEmgitA4nnRSSYSAMECNfy1tXV8E3JpZTOXUSE"/>
+</div>
+<p class="text-xs text-secondary font-bold mb-1">NEWS</p>
+<h3 class="font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary transition-colors">Is 5G really worth the upgrade? Explained.</h3>
+<p class="text-xs text-slate-500">Oct 05, 2024 • 6 min read</p>
+</article>
+<article class="group cursor-pointer">
+<div class="rounded-lg overflow-hidden mb-3 aspect-video relative">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Smartphone gaming" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_MiABsT1APCocWLKcFfSPsaTSATOW8tQTeE5y9vHuDCxKAV5HPtBwmABC8aWzM-TAaZ4CBB-f9Hu8N_uQJr7bWMxXQeVlnc3WL6uWB3JYeg2co8xpKdSyySejgZ_z31qG7beFAVs7iE2KVmFlz-I0W1_zF06L4lPR6s34NAj9Rkrt2Ph-tr9JEP9dZ9NZU-xO9nnSnVCrPY9vsVHYA3ZhLruQ50SZhapu8kTZN1itu-ITzpt8sys6AFfKsvbZRg6NLnOZHWS_6_pJ"/>
+</div>
+<p class="text-xs text-secondary font-bold mb-1">GAMING</p>
+<h3 class="font-bold text-slate-900 leading-tight mb-2 group-hover:text-primary transition-colors">Best gaming phones under $600</h3>
+<p class="text-xs text-slate-500">Oct 01, 2024 • 4 min read</p>
+</article>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+<!-- Column 1: About -->
+<div>
+<div class="flex items-center gap-2 mb-6">
+<div class="size-8 bg-white/10 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">smartphone</span>
+</div>
+<h2 class="text-xl font-bold">MobilesCentrix</h2>
+</div>
+<p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                        Your one-stop destination for the latest mobile phones, tablets, and accessories. We offer the best deals and official warranty on all products.
+                    </p>
+<div class="flex gap-4">
+<a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" href="#"><i class="material-symbols-outlined text-sm">public</i></a>
+<a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" href="#"><i class="material-symbols-outlined text-sm">send</i></a>
+<a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" href="#"><i class="material-symbols-outlined text-sm">alternate_email</i></a>
+</div>
+</div>
+<!-- Column 2: Quick Links -->
+<div>
+<h3 class="text-lg font-bold mb-6">Quick Links</h3>
+<ul class="space-y-3 text-sm text-slate-300">
+<li><a class="hover:text-white transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Contact Support</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Terms &amp; Conditions</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Return Policy</a></li>
+</ul>
+</div>
+<!-- Column 3: Categories -->
+<div>
+<h3 class="text-lg font-bold mb-6">Categories</h3>
+<ul class="space-y-3 text-sm text-slate-300">
+<li><a class="hover:text-white transition-colors" href="#">Smartphones</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Tablets</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Wearables</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Audio</a></li>
+<li><a class="hover:text-white transition-colors" href="#">Accessories</a></li>
+</ul>
+</div>
+<!-- Column 4: Newsletter -->
+<div>
+<h3 class="text-lg font-bold mb-6">Newsletter</h3>
+<p class="text-slate-300 text-sm mb-4">Subscribe to our newsletter and get 10% off your first purchase.</p>
+<div class="flex flex-col gap-3">
+<input class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-sm text-white placeholder-slate-400 focus:ring-2 focus:ring-white/50 focus:border-transparent outline-none" placeholder="Your email address" type="email"/>
+<button class="bg-secondary hover:bg-orange-600 text-white font-bold py-2.5 px-4 rounded-lg transition-colors">Subscribe</button>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-sm text-slate-400">© 2024 MobilesCentrix. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<span class="text-slate-400 text-xs">We Accept:</span>
+<div class="flex gap-2">
+<div class="h-6 w-10 bg-white/10 rounded flex items-center justify-center"><span class="material-symbols-outlined text-xs">credit_card</span></div>
+<div class="h-6 w-10 bg-white/10 rounded flex items-center justify-center"><span class="material-symbols-outlined text-xs">account_balance</span></div>
+<div class="h-6 w-10 bg-white/10 rounded flex items-center justify-center"><span class="material-symbols-outlined text-xs">payments</span></div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
